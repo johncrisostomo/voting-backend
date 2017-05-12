@@ -7,7 +7,6 @@ module.exports = function (app) {
   const polls = new mongooseClient.Schema({
     name: { type: String, required: true },
     ownerId: { type: mongooseClient.Schema.Types.ObjectId, required: true },
-    choices: { type: Object, default: {} },
     deleted: { type: Boolean, default: false },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
